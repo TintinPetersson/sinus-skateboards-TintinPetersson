@@ -13,7 +13,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-transparent mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">SinusSkateboards.UI</a>
+                <a class="navbar-brand" asp-page="/Index"><img src="~/images/logos/sinus-logo-symbol-small.png" /></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -21,23 +21,25 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link text-dark" style="font-size:24px;" asp-area="" asp-page="/Index">Order</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Shop/ProductShop">Shop</a>
+                            <a class="nav-link text-dark" style="font-size:24px;" asp-area="" asp-page="/Shop/ProductShop">Shop</a>
                         </li>
                     </ul>
                 </div>
             </div>
             @if (SignInManager.IsSignedIn(User))
             {
-                <a class="btn btn-outline-primary" asp-page="/Logout">LOG OUT</a>
-                <a class="btn btn-outline-primary" asp-page="/Admin/CheckOrders">CHECK ORDERS</a>
-                <a class="btn btn-outline-primary" asp-page="/Admin/ProductOverview">PRODUCT OVERVIEW</a>
+                <a class="login btn btn-outline-light mr-2" asp-page="/Logout">Log out</a>
+                <a class="login btn btn-outline-light mr-2" asp-page="/Admin/CheckOrders">Orders</a>
+                <a class="login btn btn-outline-light mr-2" asp-page="/Admin/ProductOverview">Products</a>
+                <a asp-page="/Shop/Cart"><img src="~/images/logos/shopping-cart-64.png" style="width:40px; height: 40px;" /></a>
             }
             else
             {
-                <a class="btn btn-outline-primary" asp-page="/Login">LOG IN</a>
+                <a class="login btn btn-outline-light pr-2" asp-page="/Login">Log in</a>
+                <a asp-page="/Shop/Cart"><img src="~/images/logos/shopping-cart-64.png" style="width:40px; height: 40px;" /></a>
             }
         </nav>
     </header>

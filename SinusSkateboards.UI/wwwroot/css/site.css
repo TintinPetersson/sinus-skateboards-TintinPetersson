@@ -1,6 +1,8 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;
@@ -48,16 +50,37 @@ button.accept-policy {
 }
 
 body {
-    background-image: url('https://wallpaperaccess.com/full/1668047.jpg');
+    background-image: url('https://wallpaperboat.com/wp-content/uploads/2020/06/04/43177/skateboard-20.jpg');
+    font-family: 'Lobster', cursive;
     width: 100%;
     height: auto;
     background-repeat: repeat-y;
     background-size: cover;
 }
 .card {
+    width: stretch;
+    border-radius: 20px;
     transition: .2s;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
 }
     .card:hover {
         transform: scale(1, 1.1);
     }
+
+#content, html, body {
+    height: 100%;
+}
+
+.searchBar {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color:white;
+    border:none;
+    height: 35px;
+}
+.login{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

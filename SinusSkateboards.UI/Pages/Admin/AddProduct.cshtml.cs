@@ -77,7 +77,7 @@ namespace SinusSkateboards.UI.Pages.Admin
                 await context.Products.AddAsync(Product);
                 await context.SaveChangesAsync();
 
-                return RedirectToPage("/Index");
+                return RedirectToPage("/Admin/ProductOverview");
             }
 
             return RedirectToPage("/Index");

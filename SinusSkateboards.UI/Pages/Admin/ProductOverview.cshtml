@@ -2,29 +2,31 @@
 @model SinusSkateboards.UI.Pages.Admin.ProductOverview
 @{
 }
-@if (Model.Products != null)
-{
-    <div class="container">
-        <div class="row">
+<div class="container">
+    <div class="row justify-content-center align-content-center">
+        @if (Model.Products != null)
+        {
             @foreach (var product in Model.Products)
             {
-            <div class="col">
-                <p>@product.Title</p>
-                <p>@product.Price</p>
-                <p>@product.Color</p>
-                <img src="~/images/@product.Image" class="" />
-                <form method="post">
-                    <button class="btn btn-outline-light" type="submit" asp-route-id="@product.Id" asp-page-handler="Delete">Delete</button>
-                </form>
-                <a class="btn btn-outline-light" asp-route-id="@product.Id" asp-page="/Admin/EditProduct">Edit</a>
-            </div>
+                <div class="col-3 mr-3 mt-3 text-light border-left border-bottom border-right border-top" style=" background: rgba(0, 0, 0, 0.5); font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+                    <img src="~/images/@product.Image" style="max-width:200px;" />
+                    <p>@product.Title</p>
+                    <p>@product.Price kr</p>
+                    <p>Color: @product.Color</p>
+                    <p>Description: @product.Description</p>
+                    <form method="post">
+                        <button class="btn btn-outline-light mb-1" style="width: 100px;" type="submit" asp-route-id="@product.Id" asp-page-handler="Delete">Delete</button>
+                    </form>
+                    <a class="btn btn-outline-light" style="width:100px;" asp-route-id="@product.Id" asp-page="/Admin/EditProduct">Edit</a>
+                </div>
             }
-        </div>
+        }
+        else
+        {
+            <h1>No products added yet...</h1>
+        }
     </div>
-}
-else
-{
-    <h1>No products added yet...</h1>
-}
-
-<a class="btn btn-outline-light" asp-page="/Admin/AddProduct">Add Product</a>
+    <div class="row mt-3 justify-content-center align-content-center">
+            <a class="btn btn-light" asp-page="/Admin/AddProduct">Add Product</a>
+    </div>
+</div>

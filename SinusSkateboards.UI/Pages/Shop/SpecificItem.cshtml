@@ -2,3 +2,61 @@
 @model SinusSkateboards.UI.Pages.Shop.SpecificItemModel
 @{
 }
+<div class="container">
+    <div class="row justify-content-center align-content-center">
+        <div class="col-md-4 mb-4">
+            <div class="card text-light p-3 mb-2">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-row align-items-center">
+                        <img class="card-img-top" src="~/images/@Model.Product.Image">
+                    </div>
+                </div>
+                <div class="ms-2">
+                    <h2 class="mb-0 ml-3" style="color:bisque; font-weight:bolder">@Model.Product.Title</h2>
+                </div>
+                <div class="ms-2 ml-2">
+                    <p>@Model.Product.Description</p>
+                </div>
+                <div class="mt-5">
+                    <h2 class="heading">@Model.Product.Price kr</h2>
+                    <div class="mt-3 mb-2">
+                        <span>Color: @Model.Product.Color</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center align-content-center">
+        @foreach (var product in Model.SameCategory)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card text-light p-3 mb-2">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-row align-items-center">
+                            <img class="card-img-top" src="~/images/@product.Image">
+                        </div>
+                    </div>
+                    <div class="ms-2">
+                        <h2 class="mb-0 ml-3" style="color:bisque; font-weight:bolder">@product.Title</h2>
+                    </div>
+                    <div class="mt-5">
+                        <h2 class="heading">@product.Price kr</h2>
+                        <div class="mt-3 mb-2">
+                            <span>Color: @product.Color</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+
+
+
+
+

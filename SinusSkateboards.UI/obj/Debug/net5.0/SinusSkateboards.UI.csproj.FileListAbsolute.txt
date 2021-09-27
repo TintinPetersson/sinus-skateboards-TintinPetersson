@@ -398,3 +398,4 @@ C:\Users\tpsso\Source\Repos\sinus-skateboards-TintinPetersson\SinusSkateboards.U
 C:\Users\tpsso\Source\Repos\sinus-skateboards-TintinPetersson\SinusSkateboards.UI\obj\Debug\net5.0\Razor\Pages\Admin\ProductOverview.cshtml.g.cs
 C:\Users\tpsso\Source\Repos\sinus-skateboards-TintinPetersson\SinusSkateboards.UI\obj\Debug\net5.0\Razor\Pages\Shop\SpecificItem.cshtml.g.cs
 C:\Users\tpsso\Source\Repos\sinus-skateboards-TintinPetersson\SinusSkateboards.UI\obj\Debug\net5.0\Razor\Pages\Admin\EditProduct.cshtml.g.cs
+C:\Users\tpsso\Source\Repos\sinus-skateboards-TintinPetersson\SinusSkateboards.UI\obj\Debug\net5.0\Razor\Pages\Shop\Cart.cshtml.g.cs

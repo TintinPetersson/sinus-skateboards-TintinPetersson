@@ -92,7 +92,7 @@ namespace SinusSkateboards.UI.Pages.Admin
             context.Products.Add(Product);
             await context.SaveChangesAsync();
 
-            return RedirectToPage("/Index");
+            return RedirectToPage("/Admin/ProductOverview");
         }
     }
 }
