@@ -1,0 +1,50 @@
+﻿@page
+@model SinusSkateboards.UI.Pages.Admin.EditProductModel
+@{
+}
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            <h1 class="mb-3 text-light">Add Product</h1>
+
+            <form method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="All" class="text-danger">
+                </div>
+                <div class="mb-3">
+                    <input hidden asp-for="@Model.Product.Image" />
+                    <label for="imageUpload" class="btn btn-outline-light">Select image...</label>
+                    <input type="file" style="display:none" id="imageUpload" asp-for="@Model.Photo" accept=".jpg, .jpeg, .png" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-light" asp-for="@Model.Product.Title">Title</label>
+                    <input type="text" asp-for="@Model.Product.Title" class="form-control bg-transparent text-light" />
+                    <span asp-validation-for="@Model.Product.Title" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-light" asp-for="@Model.Product.Price">Price</label>
+                    <input type="number" asp-for="@Model.Product.Price" class="form-control bg-transparent text-light" />
+                    <span asp-validation-for="@Model.Product.Price" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-light" asp-for="@Model.Product.Color">Color</label>
+                    <input type="text" asp-for="@Model.Product.Color" class="form-control bg-transparent text-light" />
+                    <span asp-validation-for="@Model.Product.Color" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-light" asp-for="@Model.Product.Description">Description</label>
+                    <textarea type="text" asp-for="@Model.Product.Description" class="form-control bg-transparent text-light"></textarea>
+                    <span asp-validation-for="@Model.Product.Description" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <select class="form-control" asp-for="@Model.Product.ProductCategory" asp-items="@Model.Category">
+                        <option class="form-control" selected="selected" value="">Category</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" asp-route-id="@Model.Product.Id" class="btn btn-outline-light">Edit Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

@@ -1,23 +1,102 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\albin\\Desktop\\SinusSkateboards\\SinusSkateboards.UI\\SinusSkateboards.UI.csproj": {}
+    "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.UI\\SinusSkateboards.UI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\albin\\Desktop\\SinusSkateboards\\SinusSkateboards.UI\\SinusSkateboards.UI.csproj": {
+    "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DAL\\SinusSkateboards.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\albin\\Desktop\\SinusSkateboards\\SinusSkateboards.UI\\SinusSkateboards.UI.csproj",
-        "projectName": "SinusSkateboards.UI",
-        "projectPath": "C:\\Users\\albin\\Desktop\\SinusSkateboards\\SinusSkateboards.UI\\SinusSkateboards.UI.csproj",
-        "packagesPath": "C:\\Users\\albin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\albin\\Desktop\\SinusSkateboards\\SinusSkateboards.UI\\obj\\",
+        "projectUniqueName": "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DAL\\SinusSkateboards.DAL.csproj",
+        "projectName": "SinusSkateboards.DAL",
+        "projectPath": "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DAL\\SinusSkateboards.DAL.csproj",
+        "packagesPath": "C:\\Users\\tpsso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\albin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tpsso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DTO\\SinusSkateboards.DTO.csproj": {
+                "projectPath": "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DTO\\SinusSkateboards.DTO.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DTO\\SinusSkateboards.DTO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DTO\\SinusSkateboards.DTO.csproj",
+        "projectName": "SinusSkateboards.DTO",
+        "projectPath": "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DTO\\SinusSkateboards.DTO.csproj",
+        "packagesPath": "C:\\Users\\tpsso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DTO\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\tpsso\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,7 +122,107 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.UI\\SinusSkateboards.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.UI\\SinusSkateboards.UI.csproj",
+        "projectName": "SinusSkateboards.UI",
+        "projectPath": "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.UI\\SinusSkateboards.UI.csproj",
+        "packagesPath": "C:\\Users\\tpsso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.UI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\tpsso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DAL\\SinusSkateboards.DAL.csproj": {
+                "projectPath": "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DAL\\SinusSkateboards.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.10, )"
             }

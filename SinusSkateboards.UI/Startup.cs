@@ -1,9 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SinusSkateboards.DAL.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +27,23 @@ namespace SinusSkateboards.UI
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddRazorPages();
+
+			services.AddDbContext<AuthDbContext>(options =>
+			  options.UseSqlServer(Configuration.GetConnectionString("AuthDbConnection")));
+
+			services.AddIdentity<IdentityUser, IdentityRole>(options =>
+			{
+				options.Password.RequireDigit = false;
+				options.Password.RequiredLength = 5;
+				options.Password.RequireNonAlphanumeric = false;
+				options.Password.RequireUppercase = false;
+			})
+			   .AddEntityFrameworkStores<AuthDbContext>();
+
+			services.ConfigureApplicationCookie(config =>
+			{
+				config.LoginPath = "/Login";
+			});
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +64,8 @@ namespace SinusSkateboards.UI
 			app.UseStaticFiles();
 
 			app.UseRouting();
+
+			app.UseAuthentication();
 
 			app.UseAuthorization();
 

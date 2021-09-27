@@ -1,0 +1,30 @@
+﻿@page
+@model SinusSkateboards.UI.Pages.Admin.ProductOverview
+@{
+}
+@if (Model.Products != null)
+{
+    <div class="container">
+        <div class="row">
+            @foreach (var product in Model.Products)
+            {
+            <div class="col">
+                <p>@product.Title</p>
+                <p>@product.Price</p>
+                <p>@product.Color</p>
+                <img src="~/images/@product.Image" class="" />
+                <form method="post">
+                    <button class="btn btn-outline-light" type="submit" asp-route-id="@product.Id" asp-page-handler="Delete">Delete</button>
+                </form>
+                <a class="btn btn-outline-light" asp-route-id="@product.Id" asp-page="/Admin/EditProduct">Edit</a>
+            </div>
+            }
+        </div>
+    </div>
+}
+else
+{
+    <h1>No products added yet...</h1>
+}
+
+<a class="btn btn-outline-light" asp-page="/Admin/AddProduct">Add Product</a>

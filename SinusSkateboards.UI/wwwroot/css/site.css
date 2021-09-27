@@ -27,19 +27,15 @@ a {
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  font-size: 14px;
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
 @media (min-width: 768px) {
   html {
     font-size: 16px;
-  }
-}
 
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+  }
 }
 
 .box-shadow {
@@ -51,21 +47,17 @@ button.accept-policy {
   line-height: inherit;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    background-image: url('https://wallpaperaccess.com/full/1668047.jpg');
+    width: 100%;
+    height: auto;
+    background-repeat: repeat-y;
+    background-size: cover;
 }
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+.card {
+    transition: .2s;
+    background: rgba(0, 0, 0, 0.4);
 }
+    .card:hover {
+        transform: scale(1, 1.1);
+    }
