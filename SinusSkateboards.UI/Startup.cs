@@ -28,6 +28,11 @@ namespace SinusSkateboards.UI
 		{
 			services.AddRazorPages();
 
+			services.AddSession(options => {
+				options.Cookie.Name = "Cart";
+				options.Cookie.MaxAge = TimeSpan.FromDays(2);
+			});
+
 			services.AddDbContext<AuthDbContext>(options =>
 			  options.UseSqlServer(Configuration.GetConnectionString("AuthDbConnection")));
 
@@ -62,6 +67,8 @@ namespace SinusSkateboards.UI
 
 			app.UseHttpsRedirection();
 			app.UseStaticFiles();
+
+			app.UseSession();
 
 			app.UseRouting();
 

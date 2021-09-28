@@ -58,17 +58,30 @@ body {
     background-size: cover;
 }
 .card {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: stretch;
     border-radius: 20px;
     transition: .2s;
     background: rgba(0, 0, 0, 0.5);
 }
     .card:hover {
-        transform: scale(1, 1.1);
+        transform: scale(1, 1.05);
     }
 
 #content, html, body {
     height: 100%;
+}
+.card-img-top {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+    justify-content: center;
+}
+.card-img-top2 {
+    width: 100%;
+    height: 12vw;
+    object-fit: cover;
+    justify-content: center;
 }
 
 .searchBar {
@@ -81,6 +94,37 @@ body {
     border:none;
     height: 35px;
 }
-.login{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.login {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.nav-link{
+    font-size: 24px;
+}
+.form-control {
+    background: rgba(0, 0, 0, 0.5);
+    color:white;
+}
+.card-title{
+    font-size: 22px;
+    font-weight:bolder;
+    color:bisque;
+}
+.cart {
+    background: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: .2s;
+    background: rgba(0, 0, 0, 0.5);
+}
+    .cart:hover {
+        transform: scale(1.05, 1);
+    }
+.cart-img {
+    width: 55px;
+    height: 5vw;
+    object-fit: scale-down;
+    justify-content: start;
 }

@@ -5,19 +5,19 @@
 
 <div class="container mt-5">
     <div class="row justify-content-center align-items-center">
-        <h1 class="mb-3 text-light" style="background:black;">Login</h1>
+        <h1 class="mb-3 text-light">Login</h1>
     </div>
         <div class="row justify-content-center align-items-center">
             <div class="col-sm-12 col-md-12 col-lg-4">
                 <form method="post">
                     <div class="mb-3">
                         <label class="form-label text-light" asp-for="Login.Username">Username</label>
-                        <input type="text" asp-for="Login.Username" class="form-control text-light" style=" background: rgba(0, 0, 0, 0.5);" />
+                        <input type="text" asp-for="Login.Username" class="form-control"/>
                         <span asp-validation-for="Login.Username" class="text-danger"></span>
                     </div>
                     <div class="mb-3">
                         <label class="form-label text-light" asp-for="Login.Password">Password</label>
-                        <input type="password" asp-for="Login.Password" class="form-control text-light" style=" background: rgba(0, 0, 0, 0.5);" />
+                        <input type="password" asp-for="Login.Password" class="form-control" />
                         <span asp-validation-for="Login.Password" class="text-danger"></span>
                     </div>
                     <div class="mb-3 form-check text-light">

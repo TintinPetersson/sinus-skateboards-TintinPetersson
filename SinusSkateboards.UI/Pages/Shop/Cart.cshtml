@@ -2,8 +2,30 @@
 @model SinusSkateboards.UI.Pages.Shop.CartModel
 @{
 }
-<div class="container mt-5">
+<div class="small-container mt-5">
     <div class="row justify-content-center align-content-center">
         <h1 class="text-light" style="background:black; font-size:52px;">Your cart</h1>
-    </div> 
+    </div>
+    @if (Model.Products != null)
+    {
+        @foreach (var product in Model.Products)
+        {
+            <div class="row cart justify-content-between align-content-center text-light d-flex">
+                <img class="cart-img" src="~/images/@product.Image" />
+                <h4 class="mt-4 ml-2">@product.Title</h4>
+                <h4 class="mt-4 mr-2 justify-content-end">@product.Price kr</h4>
+            </div>
+        }
+        <div class="row mt-3 cart justify-content-between align-content-center text-light d-flex">
+            <button class="ml-2 mt-1 mb-1 btn btn-outline-light justify-content-start">Check out</button>
+            <h4 class="mt-2 mr-2 justify-content-end">Sub total: @Model.Sum kr</h4>
+        </div>
+    }
+    else
+    {
+        <div class="row justify-content-center align-content-center">
+            <h2 class="text-light">Empty</h2>
+        </div>
+    }
+
 </div>
