@@ -6,7 +6,7 @@
     <div class="row justify-content-center align-content-center">
         <h1 class="text-light" style="background:black; font-size:52px;">Your cart</h1>
     </div>
-    @if (Model.Products.Count() > 0)
+    @if (Model.Products != null)
     {
         @foreach (var product in Model.Products)
         {

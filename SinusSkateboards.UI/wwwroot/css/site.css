@@ -130,3 +130,13 @@ body {
     .card-link{
         color:bisque;
     }
+.imageZoom {
+    transition: .5s;
+    opacity: 65%;
+}
+    .imageZoom:hover {
+        transform: scale(1.2);
+        opacity: 100%;
+        transition: opacity 1.5s;
+    }
+
