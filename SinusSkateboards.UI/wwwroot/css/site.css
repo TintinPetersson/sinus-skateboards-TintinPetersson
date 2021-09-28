@@ -113,18 +113,20 @@ body {
     font-weight:bolder;
     color:bisque;
 }
-.cart {
-    background: black;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    transition: .2s;
-    background: rgba(0, 0, 0, 0.5);
-}
-    .cart:hover {
-        transform: scale(1.05, 1);
-    }
 .cart-img {
     width: 55px;
     height: 5vw;
     object-fit: scale-down;
     justify-content: start;
 }
+.cart-item {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: black;
+    transition: .2s;
+}
+    .cart-item:hover {
+        transform: scale(1.05, 1);
+    }
+    .card-link{
+        color:bisque;
+    }

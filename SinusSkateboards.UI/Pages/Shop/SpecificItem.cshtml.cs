@@ -30,9 +30,10 @@ namespace SinusSkateboards.UI.Pages.Shop
         {
             Product = context.Products.Where(c => c.Id == id).FirstOrDefault();
 
-            List<ProductModel> products = new List<ProductModel>();
 
             string stringProduct = HttpContext.Session.GetString("Cart");
+
+            List<ProductModel> products = new List<ProductModel>();
 
             if (!String.IsNullOrEmpty(stringProduct))
             {

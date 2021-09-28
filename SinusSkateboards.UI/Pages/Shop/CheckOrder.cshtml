@@ -1,0 +1,19 @@
+﻿@page
+@model SinusSkateboards.UI.Pages.Shop.CheckOrderModel
+@{
+}
+<div class="container mt-5 mb-3">
+    <div class="row justify-content-center align-content-center mb-2">
+        <form method="post">
+            <a class="mb-2 mr-2 pb-2"><img src="~/images/logos/refresh.png" style="width:25px;" /></a>
+            <input name="search" type="text" placeholder="Search..." class="searchBar pl-2" />
+            <button hidden asp-route-search="search" type="submit">Search</button>
+        </form>
+    </div>
+</div>
+
+@if (Model.OrderExists == true)
+{
+    <h1>@Model.Order.Date</h1>
+    <h1>@Model.Order.Id</h1>
+}

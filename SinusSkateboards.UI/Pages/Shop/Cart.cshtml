@@ -6,19 +6,21 @@
     <div class="row justify-content-center align-content-center">
         <h1 class="text-light" style="background:black; font-size:52px;">Your cart</h1>
     </div>
-    @if (Model.Products != null)
+    @if (Model.Products.Count() > 0)
     {
         @foreach (var product in Model.Products)
         {
-            <div class="row cart justify-content-between align-content-center text-light d-flex">
+            <div class="row justify-content-center align-content-center text-light d-flex">
                 <img class="cart-img" src="~/images/@product.Image" />
-                <h4 class="mt-4 ml-2">@product.Title</h4>
-                <h4 class="mt-4 mr-2 justify-content-end">@product.Price kr</h4>
+                <h4 class="cart-item mt-4 ml-2">@product.Title - @product.Price kr</h4>
+                <form method="post">
+                    <button class="btn btn-light mt-4" type="submit" asp-page-handler="Delete" asp-route-id="@product.Id">Remove</button>
+                </form>
             </div>
         }
-        <div class="row mt-3 cart justify-content-between align-content-center text-light d-flex">
-            <button class="ml-2 mt-1 mb-1 btn btn-outline-light justify-content-start">Check out</button>
-            <h4 class="mt-2 mr-2 justify-content-end">Sub total: @Model.Sum kr</h4>
+        <div class="row mt-3 ml-5 justify-content-center align-content-center text-light d-flex">
+            <h4 class="cart-item mt-2 ml-5 mr-2">Total: @Model.Sum kr</h4>
+            <a asp-page="/Shop/Checkout" class="ml-2 mt-1 mb-1 btn btn-light">Checkout</a>
         </div>
     }
     else
@@ -27,5 +29,4 @@
             <h2 class="text-light">Empty</h2>
         </div>
     }
-
 </div>
