@@ -15,8 +15,8 @@
                     <div class="card-title">
                         <p>@Model.Product.Title</p>
                     </div>
-                    <h4 class="card-link">@Model.Product.Price kr</h4>
-                    <h5 class="card-link2">@Model.Product.ProductCategory - @Model.Product.Color</h5>
+                    <h4 class="card-link2">@Model.Product.Price kr</h4>
+                    <h5 class="card-link3">@Model.Product.ProductCategory - @Model.Product.Color</h5>
                     <h5>@Model.Product.Description</h5>
                     <form method="post">
                         <button class="orderNo2 bg-transparent mt-4 mb-0" type="submit" asp-route-id="@Model.Product.Id">Add to Cart</button>

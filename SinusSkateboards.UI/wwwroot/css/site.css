@@ -62,7 +62,7 @@ body {
     width: stretch;
     border-radius: 20px;
     transition: .2s;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
 }
     .card:hover {
         transform: scale(1.03);
@@ -140,12 +140,16 @@ body {
     .cart-item:hover {
         transform: scale(1.05, 1);
     }
-.card-link {
+
+.card-link{
+    color: bisque;
+}
+.card-link2 {
     color: bisque;
     font-size: 26px;
 }
 
-.card-link2 {
+.card-link3 {
     color: slategray;
 }
 
