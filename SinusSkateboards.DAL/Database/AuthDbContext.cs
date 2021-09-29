@@ -22,5 +22,13 @@ namespace SinusSkateboards.DAL.Database
         public virtual DbSet<CustomerModel> Customer { get; set; }
         public virtual DbSet<OrderModel> Orders { get; set; }
         public virtual DbSet<ProductModel> Products { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=SinusSkateboardsDb;Trusted_Connection=True;").UseLazyLoadingProxies();
+            }
+        }
     }
 }

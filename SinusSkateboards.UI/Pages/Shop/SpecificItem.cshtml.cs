@@ -33,7 +33,7 @@ namespace SinusSkateboards.UI.Pages.Shop
 
             string stringProduct = HttpContext.Session.GetString("Cart");
 
-            List<ProductModel> products = new List<ProductModel>();
+            List<ProductModel> products = new();
 
             if (!String.IsNullOrEmpty(stringProduct))
             {
@@ -41,6 +41,8 @@ namespace SinusSkateboards.UI.Pages.Shop
             }
 
             products.Add(Product);
+
+            CartModel.ListOfItemsInCart++;
 
             stringProduct = JsonConvert.SerializeObject(products);
             HttpContext.Session.SetString("Cart", stringProduct);

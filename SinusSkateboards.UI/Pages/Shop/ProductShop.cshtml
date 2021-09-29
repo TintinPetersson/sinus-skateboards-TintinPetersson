@@ -5,10 +5,18 @@
 
 <div class="container mt-5 mb-3">
     <div class="row justify-content-center align-content-center mb-2">
+
         <form method="post">
             <a class="mb-2 mr-2 pb-2" asp-page="/Shop/ProductShop"><img src="~/images/logos/refresh.png" style="width:25px;" /></a>
             <input name="search" type="text" placeholder="Search..." class="searchBar pl-2" />
-            <button hidden asp-route-search="search" type="submit">Search</button>
+
+            <select class="form-control mt-1" asp-for="@Model.CategorySearch" asp-items="@Model.Category">
+                <option class="form-control" selected="selected" value="Choose category...">Choose category...</option>
+            </select>
+
+            <div class="row justify-content-center align-content-center mb-2">
+                <button class="btn btn-light mt-1" asp-route-search="search" type="submit">Search</button>
+            </div>
         </form>
     </div>
     <div class="row mt-5 justify-content-center align-content-center text-center d-flex">
@@ -23,9 +31,9 @@
                             </a>
                         </div>
                     </div>
-                    <h4 class="mb-0 ml-3" style="color:bisque; font-weight:bolder">@product.Title</h4>
-                    <h4 class="heading">@product.Price kr</h4>
-                    <span>Color: @product.Color</span>
+                    <h5 class="mt-1 ml-3">@product.Title</h5>
+                    <h5 class="card-link mt-1">@product.Price kr</h5>
+                    <h6 class="card-link2">@product.ProductCategory.ToString()</h6>
                 </div>
             </div>
         }

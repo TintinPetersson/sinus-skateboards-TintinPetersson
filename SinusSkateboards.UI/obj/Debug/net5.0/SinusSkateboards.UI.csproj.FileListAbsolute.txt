@@ -401,3 +401,6 @@ C:\Users\tpsso\Source\Repos\sinus-skateboards-TintinPetersson\SinusSkateboards.U
 C:\Users\tpsso\Source\Repos\sinus-skateboards-TintinPetersson\SinusSkateboards.UI\obj\Debug\net5.0\Razor\Pages\Shop\Cart.cshtml.g.cs
 C:\Users\tpsso\Source\Repos\sinus-skateboards-TintinPetersson\SinusSkateboards.UI\obj\Debug\net5.0\Razor\Pages\Shop\Checkout.cshtml.g.cs
 C:\Users\tpsso\Source\Repos\sinus-skateboards-TintinPetersson\SinusSkateboards.UI\obj\Debug\net5.0\Razor\Pages\Shop\CheckOrder.cshtml.g.cs
+C:\Users\tpsso\source\repos\sinus-skateboards-TintinPetersson\SinusSkateboards.UI\obj\Debug\net5.0\Razor\Pages\Admin\OrderInfo.cshtml.g.cs
+C:\Users\tpsso\source\repos\sinus-skateboards-TintinPetersson\SinusSkateboards.UI\bin\Debug\net5.0\Castle.Core.dll
+C:\Users\tpsso\source\repos\sinus-skateboards-TintinPetersson\SinusSkateboards.UI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Proxies.dll

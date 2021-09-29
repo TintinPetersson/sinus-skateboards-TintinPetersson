@@ -10,7 +10,7 @@ using SinusSkateboards.DAL.Database;
 namespace SinusSkateboards.DAL.Migrations
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20210927094246_Initial")]
+    [Migration("20210929124041_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -225,21 +225,23 @@ namespace SinusSkateboards.DAL.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Address")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("City")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("FirstName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LastName")
+                    b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ZipCode")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -263,29 +265,11 @@ namespace SinusSkateboards.DAL.Migrations
                     b.Property<int>("OrderNumber")
                         .HasColumnType("int");
 
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("CustomerId");
 
                     b.ToTable("Orders");
-                });
-
-            modelBuilder.Entity("SinusSkateboards.DTO.Models.ProductCategory", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Category")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("SinusSkateboards.DTO.Models.ProductModel", b =>
@@ -310,10 +294,7 @@ namespace SinusSkateboards.DAL.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int?>("ProductCategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductId")
+                    b.Property<int>("ProductCategory")
                         .HasColumnType("int");
 
                     b.Property<string>("Title")
@@ -322,8 +303,6 @@ namespace SinusSkateboards.DAL.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("OrderModelId");
-
-                    b.HasIndex("ProductCategoryId");
 
                     b.ToTable("Products");
                 });
@@ -395,12 +374,6 @@ namespace SinusSkateboards.DAL.Migrations
                     b.HasOne("SinusSkateboards.DTO.Models.OrderModel", null)
                         .WithMany("Products")
                         .HasForeignKey("OrderModelId");
-
-                    b.HasOne("SinusSkateboards.DTO.Models.ProductCategory", "ProductCategory")
-                        .WithMany()
-                        .HasForeignKey("ProductCategoryId");
-
-                    b.Navigation("ProductCategory");
                 });
 
             modelBuilder.Entity("SinusSkateboards.DTO.Models.OrderModel", b =>

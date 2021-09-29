@@ -12,6 +12,8 @@ namespace SinusSkateboards.UI.Pages.Shop
 {
     public class ProductShopModel : PageModel
     {
+        [BindProperty]
+        public ProductCategory CategorySearch { get; set; }
         public List<ProductModel> Products { get; set; }
         private readonly AuthDbContext context;
         public SelectList Category { get; set; }
@@ -30,6 +32,16 @@ namespace SinusSkateboards.UI.Pages.Shop
         {
             Products = context.Products.Where(c => c.Title.Contains(search)).ToList();
 
+            if (Products.Count() == 0)
+            {
+                Products = context.Products.Where(c => c.Color.Contains(search)).ToList();
+            }
+
+            if (search == null)
+            {
+                Products = context.Products.Where(c => c.ProductCategory == CategorySearch).ToList();
+            }
+          
             return Page();
         }
     }

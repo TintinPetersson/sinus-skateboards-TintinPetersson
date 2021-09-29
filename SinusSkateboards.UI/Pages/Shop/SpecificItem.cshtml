@@ -2,10 +2,10 @@
 @model SinusSkateboards.UI.Pages.Shop.SpecificItemModel
 @{
 }
-<div class="container">
+<div class="container pt-5">
     <div class="row justify-content-center align-content-center text-cemter d-flex">
-        <div class="col-md-4 mb-4">
-            <div class="card h-100 text-light p-3 mb-2">
+        <div class="col-md-4 mb-4 mt-5">
+            <div class="cardSpecItem h-100 text-light p-3 mb-2">
                 <div class="d-flex justify-content-center">
                     <div class="d-flex flex-row align-items-center">
                         <img class="card-img-top" src="~/images/@Model.Product.Image">
@@ -15,11 +15,11 @@
                     <div class="card-title">
                         <p>@Model.Product.Title</p>
                     </div>
-                    <h4>@Model.Product.Price kr</h4>
-                    <span>Color: @Model.Product.Color</span>
-                    <p>Description: @Model.Product.Description</p>
+                    <h4 class="card-link">@Model.Product.Price kr</h4>
+                    <h5 class="card-link2">@Model.Product.ProductCategory - @Model.Product.Color</h5>
+                    <h5>@Model.Product.Description</h5>
                     <form method="post">
-                        <button class="btn btn-light" style="width: 100%;" type="submit" asp-route-id="@Model.Product.Id">Add to Cart</button>
+                        <button class="orderNo2 bg-transparent mt-4 mb-0" type="submit" asp-route-id="@Model.Product.Id">Add to Cart</button>
                     </form>
                 </div>
             </div>

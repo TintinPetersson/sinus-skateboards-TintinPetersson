@@ -2,30 +2,37 @@
 @model SinusSkateboards.UI.Pages.Shop.CartModel
 @{
 }
-<div class="small-container mt-5">
-    <div class="row justify-content-center align-content-center">
-        <h1 class="text-light" style="background:black; font-size:52px;">Your cart</h1>
+<div class="shopping-cart">
+    <div class="titleCart">
+        Shopping Bag
     </div>
     @if (Model.Products != null)
     {
-        @foreach (var product in Model.Products)
+        @foreach (var item in Model.Products)
         {
-            <div class="row justify-content-center align-content-center text-light d-flex">
-                <img class="cart-img" src="~/images/@product.Image" />
-                <h4 class="cart-item mt-4 ml-2">@product.Title - @product.Price kr</h4>
-                <form method="post">
-                    <button class="btn btn-light mt-4" type="submit" asp-page-handler="Delete" asp-route-id="@product.Id">Remove</button>
-                </form>
+            <div class="item">
+                <div class="buttons">
+                    <form method="post">
+                        <button class="bg-transparent border-0" type="submit" asp-page-handler="Delete" asp-route-id="@item.Id"><img src="~/images/logos/x-mark-64.png" style="width:20px;" /></button>
+                    </form>
+                </div>
+                <div class="image">
+                    <img src="~/images/@item.Image" style="width:70px;" alt="" />
+                </div>
+                <div class="description">
+                    <span>@item.Title</span>
+                    <span>@item.Color</span>
+                    <span>@item.ProductCategory</span>
+                </div>
+                <div class="total-price">@item.Price kr</div>
             </div>
         }
-        <div class="row mt-3 ml-5 justify-content-center align-content-center text-light d-flex">
-            <h4 class="cart-item mt-2 ml-5 mr-2">Total: @Model.Sum kr</h4>
-            <a asp-page="/Shop/Checkout" class="ml-2 mt-1 mb-1 btn btn-light">Checkout</a>
-        </div>
+        <div class="align-self-center sumTitle">Summary: <span class="pl-5 summary">@Model.Sum kr</span></div>
+        <a asp-page="/Shop/Checkout" class="align-self-center text-light orderNo ml-2 mt-1 mb-1">Checkout</a>
     }
     else
     {
-        <div class="row justify-content-center align-content-center">
+        <div class="row justify-content-center">
             <h2 class="text-light">Empty</h2>
         </div>
     }

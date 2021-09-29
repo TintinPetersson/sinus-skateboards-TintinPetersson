@@ -13,6 +13,7 @@ namespace SinusSkateboards.UI.Pages.Shop
 {
     public class CartModel : PageModel
     {
+        public static int ListOfItemsInCart { get; set; }
         public List<ProductModel> Products { get; set; }
         public ProductModel Product { get; set; }
         public decimal Sum { get; set; }
@@ -42,6 +43,8 @@ namespace SinusSkateboards.UI.Pages.Shop
 
             stringProduct = JsonConvert.SerializeObject(Products);
             HttpContext.Session.SetString("Cart", stringProduct);
+
+            ListOfItemsInCart--;
 
             return RedirectToPage("/Shop/Cart");
         }

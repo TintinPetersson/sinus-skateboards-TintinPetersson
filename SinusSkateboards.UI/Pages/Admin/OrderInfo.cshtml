@@ -1,0 +1,55 @@
+﻿@page
+@model SinusSkateboards.UI.Pages.Admin.OrderInfoModel
+@{
+}
+@if (Model.Order != null)
+{
+<div class="small-container mt-5 ">
+    <div class="row justify-content-center align-content-center d-flex text-center text-light">
+        <h1 class="text-light" style="background:black; font-size:52px;">Order Info</h1>
+    </div>
+    <div class="row mt-5 justify-content-center align-content-center d-flex text-center text-light">
+        <div class="col-md-3 mb-4">
+            <div class="cardSpecItem">
+                <div class="d-flex justify-content-center">
+                    <div class="d-flex flex-row align-items-center">
+                        <h4 class="text-light"><span class="card-link">Order number: </span>@Model.Order.OrderNumber</h4>
+                    </div>
+                </div>
+                <h5 class="text-light mt-1"><span class="card-link">Quantity: </span>@Model.Order.Products.Count() item(s)</h5>
+                <h5 class="text-light mt-1"><span class="card-link">Email: </span>@Model.Order.Customer.Email</h5>
+                <h5 class="text-light mt-1"><span class="card-link">Name: </span>@Model.Order.Customer.Name</h5>
+                <h5 class="text-light mt-1"><span class="card-link">Zip Code: </span>@Model.Order.Customer.ZipCode</h5>
+                <h5 class="text-light mt-1"><span class="card-link">City: </span>@Model.Order.Customer.City</h5>
+                <h5 class="text-light mt-1"><span class="card-link">Delivery address: </span>@Model.Order.Customer.Address</h5>
+                <h5 class="text-light mt-1"><span class="card-link">Order date: </span>@Model.Order.Date</h5>
+                <a class="orderNo text-light mt-2 mb-1" asp-page="/Admin/CheckOrders">Return</a>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center align-content-center text-light">
+        <h2>Ordered products...</h2>
+    </div>
+    <div class="row justify-content-center align-content-center text-center d-flex">
+        @foreach (var product in Model.Order.Products)
+        {
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 text-light p-3 mb-2">
+                    <div class="d-flex justify-content-center">
+                        <div class="d-flex flex-row align-items-center">
+                            <img class="card-img-top2" src="~/images/@product.Image">
+                        </div>
+                    </div>
+                    <h5 class="card-link">@product.Title</h5>
+                    <span class="text-light mt-1">Color: @product.Color</span>
+                    <span class="text-light mt-1">@product.Price kr</span>
+                    <span class="text-light mt-1">Category: @product.ProductCategory.ToString()</span>
+                    <span class="text-light mt-1">Description: </span>
+                    <span class="text-light mt-1">@product.Description</span>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+}
+

@@ -2,3 +2,40 @@
 @model SinusSkateboards.UI.Pages.Admin.CheckOrdersModel
 @{
 }
+<div class="small-container mt-5">
+    <div class="row justify-content-center align-content-center">
+        <h1 class="text-light" style="background:black; font-size:52px;">Orders</h1>
+    </div>
+    @if (Model.Orders.Count() > 0)
+    {
+        <div class="row mt-5 justify-content-center align-content-center d-flex text-center text-light">
+
+            @foreach (var order in Model.Orders)
+            {
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <div class="d-flex justify-content-center">
+                        <div class="d-flex flex-row align-items-center">
+                            <h4 class="card-link">Order number: </h4>
+                        </div>
+                    </div>
+                    <h4 class="text-light">@order.OrderNumber</h4>
+                    <span class="card-link">Quantity: </span>
+                    <span class="text-light">@order.Products.Count() item(s)</span>
+                    <span class="card-link mt-1">Order placed: </span>
+                    <span class="text-light mt-1">@order.Date</span>
+                    <span class="card-link">Sent to:</span>
+                    <span class="text-light mb-2">@order.Customer.Address</span>
+                    <a class="orderNo text-light mt-2 mb-1" asp-page="/Admin/OrderInfo" asp-route-id="@order.Id">More info</a>
+                </div>
+            </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="row justify-content-center align-content-center">
+            <h2 class="text-light">No Orders</h2>
+        </div>
+    }
+</div>

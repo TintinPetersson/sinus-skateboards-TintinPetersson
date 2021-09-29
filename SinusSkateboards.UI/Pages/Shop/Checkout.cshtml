@@ -2,11 +2,11 @@
 @model SinusSkateboards.UI.Pages.Shop.CheckoutModel
 @{
 }
-@if (Model.hej > 0)
+@if (Model.OrderSuccessful == true)
 {
 <div class="container">
     <div class="row mt-5 justify-content-center align-content-center d-flex text-center text-light">
-        <h1 class="mt-5">Order successful!</h1>
+        <h1 class="mt-5 title">Order successful!</h1>
     </div>
     <div class="row mt-5 justify-content-center align-content-center d-flex text-center text-light">
         <div class="col-md-3 mb-4">
@@ -16,9 +16,17 @@
                         <h4 class="text-light"><span class="card-link">Order number: </span>@Model.Order.OrderNumber</h4>
                     </div>
                 </div>
-                <h5 class="text-light mt-1"><span class="card-link">Quantity: </span>@Model.Order.Products.Count() items</h5>
-                <h5 class="text-light mt-1"><span class="card-link">Order receit sent to: </span>@Model.Customer.Email</h5>
-                <h5 class="text-light mt-1"><span class="card-link">Delivery address: </span>@Model.Customer.Address</h5>
+                <span class="text-light mt-1 pr-3 pl-3 font-italic">We're now collecting your order and will send it ASAP!</span>
+                <span class="text-light mt-1 pr-2 pl-2 font-italic">Delivery time 1 - 3 days</span>
+                <span class="card-link mt-1">Earliest arrival: </span>
+                <h5 class="text-light">@Model.OneDay.DayOfWeek</h5>
+                <span class="card-link mt-1">Latest arrival: </span>
+                <h5 class="text-light">@Model.ThreeDays.DayOfWeek</h5>
+                <span class="card-link mt-1">Quantity: </span>
+                <h5 class="text-light">@Model.Order.Products.Count() items</h5>
+                <span class="card-link mt-1">Receit sent to: </span>
+                <h5 class="text-light">@Model.Customer.Email</h5>
+                <a class="orderNo text-light mt-2 mb-1" asp-page="/Index">Return</a>
             </div>
         </div>
     </div>
@@ -28,13 +36,13 @@ else
 {
     <div class="container mt-5">
         <div class="row justify-content-center align-items-center">
-            <h1 class="mb-3 text-light">Checkout</h1>
+            <h1 class="mb-3 title">Checkout</h1>
         </div>
         <div class="row justify-content-center align-items-center">
             <h3 class="mb-3 text-light" style="background:black;">Total price: @Model.Sum kr</h3>
         </div>
         <div class="row justify-content-center align-items-center">
-            <div class="col-sm-12 col-md-12 col-lg-4">
+            <div class="textForm col-sm-12 col-md-12 col-lg-4">
                 <form method="post">
                     <div class="mb-3">
                         <label class="form-label text-light" asp-for="@Model.Customer.Name">Name</label>
