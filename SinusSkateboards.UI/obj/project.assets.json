@@ -8229,11 +8229,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tpsso\\source\\repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.UI\\SinusSkateboards.UI.csproj",
+      "projectUniqueName": "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.UI\\SinusSkateboards.UI.csproj",
       "projectName": "SinusSkateboards.UI",
-      "projectPath": "C:\\Users\\tpsso\\source\\repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.UI\\SinusSkateboards.UI.csproj",
+      "projectPath": "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.UI\\SinusSkateboards.UI.csproj",
       "packagesPath": "C:\\Users\\tpsso\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tpsso\\source\\repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.UI\\obj\\",
+      "outputPath": "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.UI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tpsso\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8250,8 +8250,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\tpsso\\source\\repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DAL\\SinusSkateboards.DAL.csproj": {
-              "projectPath": "C:\\Users\\tpsso\\source\\repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DAL\\SinusSkateboards.DAL.csproj"
+            "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DAL\\SinusSkateboards.DAL.csproj": {
+              "projectPath": "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DAL\\SinusSkateboards.DAL.csproj"
             }
           }
         }

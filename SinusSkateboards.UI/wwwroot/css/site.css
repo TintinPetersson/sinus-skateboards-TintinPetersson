@@ -9,25 +9,6 @@ a.navbar-brand {
   word-break: break-all;
 }
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
 html {
     font-size: 14px;
     position: relative;
@@ -38,15 +19,6 @@ html {
     font-size: 16px;
 
   }
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
 }
 
 body {
@@ -67,6 +39,7 @@ body {
     .card:hover {
         transform: scale(1.03);
     }
+
 .cardSpecItem {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: stretch;
@@ -103,13 +76,7 @@ body {
     height: 37px;
     width: 240px;
 }
-/*.login {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}*/
+
 .nav-link{
     font-size: 24px;
 }
@@ -150,7 +117,8 @@ body {
 }
 
 .card-link3 {
-    color: slategray;
+    color: lightslategray;
+    font-weight: 200;
 }
 
 .imageZoom {
@@ -189,15 +157,15 @@ body {
         text-decoration: none;
         transform: scale(1.1, 1);
     }
+.ProductButtons {
+    border: none;
+}
 
 ogFont {
     font-family: 'Lobster', cursive;
 }
 
-.cartCount {
-    color: lawngreen;
-    font-size: 27px;
-}
+
 .title {
     background:black; 
     font-size:52px;
@@ -213,7 +181,6 @@ ogFont {
     height: 100%;
     margin: 80px auto;
     background: rgba(0, 0, 0, 0.6);
-    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
     border-radius: 6px;
     display: flex;
     flex-direction: column;
@@ -230,6 +197,11 @@ ogFont {
     text-align: center;
 }
 
+.cartCount {
+    color: lawngreen;
+    font-size: 27px;
+}
+
 .item {
     padding: 20px 30px;
     height: 120px;
@@ -243,23 +215,11 @@ ogFont {
     margin-right: 60px;
 }
 
-.delete-btn,
-.like-btn {
-    display: inline-block;
-    Cursor: pointer;
-}
-
-.delete-btn {
-    width: 18px;
-    height: 17px;
-    background: url(&amp;quot;delete-icn.svg&amp;quot;) no-repeat center;
-}
-
 .image {
     margin-right: 50px;
 }
 
-Let’s add some basic style to product name and description.
+.
 .description {
     padding-top: 10px;
     margin-right: 60px;
@@ -334,6 +294,18 @@ Let’s add some basic style to product name and description.
     }
 }
 
+/*----------------END OF CART----------------------*/
+
+
+
 .textForm{
     font-size: 20px;
+}
+
+.cardImageEdit{
+    width: 35px;
+}
+
+.cardImageDelete {
+    width: 30px;
 }

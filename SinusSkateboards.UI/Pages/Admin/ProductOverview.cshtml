@@ -25,16 +25,23 @@
                             <div class="card-title">
                                 <p>@product.Title</p>
                             </div>
-                            <h4>@product.Price kr</h4>
-                            <h6>Category: @product.ProductCategory.ToString()</h6>
-                            <span>Color: @product.Color</span>
-                            <p>Description: @product.Description</p>
-                            <form method="post">
-                                <button class="orderNo2 bg-transparent" type="submit" asp-route-id="@product.Id" asp-page-handler="Delete">Delete</button>
-                            </form>
-                            <button class="orderNo2 bg-transparent mt-1 mb-0" asp-route-id="@product.Id" asp-page="/Admin/EditProduct">Edit</button>
+                            <h5 class="card-link2">@product.Price kr</h5>
+                            <h5 class="card-link3">Category: @product.ProductCategory.ToString()</h5>
+                            <h5 class="card-link3">Color: @product.Color</h5>
+                            <h6>Description: @product.Description</h6>
+                            <div class="row mt-4 justify-content-center align-content-center d-flex text-center">
+                                <form method="post">
+                                    <button class="ProductButtons bg-transparent" type="submit" asp-route-id="@product.Id" asp-page-handler="Delete">
+                                        <img src="~/images/logos/x-mark-64.png" class="cardImageDelete mr-3 mt-1" />
+                                    </button>
+                                </form>
+
+                                <a class="ProductButtons bg-transparent" asp-route-id="@product.Id" asp-page="/Admin/EditProduct">
+                                    <img src="~/images/logos/edit-64.png" class="cardImageEdit ml-3"/>
+                                </a>
+                            </div>
                         </div>
-                    </div>
+                        </div>
                 </div>
             }
         }

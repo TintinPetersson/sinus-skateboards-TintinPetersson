@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tpsso\\source\\repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DAL\\SinusSkateboards.DAL.csproj": {}
+    "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DAL\\SinusSkateboards.DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tpsso\\source\\repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DAL\\SinusSkateboards.DAL.csproj": {
+    "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DAL\\SinusSkateboards.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tpsso\\source\\repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DAL\\SinusSkateboards.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DAL\\SinusSkateboards.DAL.csproj",
         "projectName": "SinusSkateboards.DAL",
-        "projectPath": "C:\\Users\\tpsso\\source\\repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DAL\\SinusSkateboards.DAL.csproj",
+        "projectPath": "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DAL\\SinusSkateboards.DAL.csproj",
         "packagesPath": "C:\\Users\\tpsso\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tpsso\\source\\repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DAL\\obj\\",
+        "outputPath": "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tpsso\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\tpsso\\source\\repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DTO\\SinusSkateboards.DTO.csproj": {
-                "projectPath": "C:\\Users\\tpsso\\source\\repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DTO\\SinusSkateboards.DTO.csproj"
+              "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DTO\\SinusSkateboards.DTO.csproj": {
+                "projectPath": "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DTO\\SinusSkateboards.DTO.csproj"
               }
             }
           }
@@ -90,14 +90,14 @@
         }
       }
     },
-    "C:\\Users\\tpsso\\source\\repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DTO\\SinusSkateboards.DTO.csproj": {
+    "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DTO\\SinusSkateboards.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tpsso\\source\\repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DTO\\SinusSkateboards.DTO.csproj",
+        "projectUniqueName": "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DTO\\SinusSkateboards.DTO.csproj",
         "projectName": "SinusSkateboards.DTO",
-        "projectPath": "C:\\Users\\tpsso\\source\\repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DTO\\SinusSkateboards.DTO.csproj",
+        "projectPath": "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DTO\\SinusSkateboards.DTO.csproj",
         "packagesPath": "C:\\Users\\tpsso\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tpsso\\source\\repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DTO\\obj\\",
+        "outputPath": "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tpsso\\AppData\\Roaming\\NuGet\\NuGet.Config",

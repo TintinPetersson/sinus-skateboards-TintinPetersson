@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qJegkqLMU2DeGcVZ51WqYa9eur0NI9+yiQtBcArmQzNEf32KJj7Xkv6Dy0ybnDhE3XO/0ilqekTGHMhbcvvIrA==",
+  "dgSpecHash": "Rlg9jaRcO0wOYCOcLurvdS9dH4ODW5Pz26FexQbWDFy9TQmXZrV6SfQC/mZkMgIPK1fYXMh8bp6iWkGsBxZBMw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tpsso\\source\\repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DTO\\SinusSkateboards.DTO.csproj",
+  "projectFilePath": "C:\\Users\\tpsso\\Source\\Repos\\sinus-skateboards-TintinPetersson\\SinusSkateboards.DTO\\SinusSkateboards.DTO.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tpsso\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\tpsso\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

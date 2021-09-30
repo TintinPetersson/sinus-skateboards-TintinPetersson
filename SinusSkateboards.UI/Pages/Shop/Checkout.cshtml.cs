@@ -90,6 +90,10 @@ namespace SinusSkateboards.UI.Pages.Shop
             while (ThreeDays.DayOfWeek == DayOfWeek.Saturday || ThreeDays.DayOfWeek == DayOfWeek.Sunday)
             {
                 ThreeDays = ThreeDays.AddDays(1);
+                if (ThreeDays.DayOfWeek == DayOfWeek.Monday)
+                {
+                    ThreeDays = ThreeDays.AddDays(1);
+                }
             }
 
 
