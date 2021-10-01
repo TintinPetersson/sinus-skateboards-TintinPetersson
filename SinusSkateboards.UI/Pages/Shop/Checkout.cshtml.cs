@@ -14,6 +14,7 @@ namespace SinusSkateboards.UI.Pages.Shop
 {
     public class CheckoutModel : PageModel
     {
+        public string FirstName { get; set; }
         private readonly AuthDbContext context;
         public CheckoutModel(AuthDbContext context)
         {
@@ -40,7 +41,6 @@ namespace SinusSkateboards.UI.Pages.Shop
                     Sum += product.Price;
                 }
             }
-
         }
         public async Task<IActionResult> OnPost()
         {
@@ -95,6 +95,10 @@ namespace SinusSkateboards.UI.Pages.Shop
                     ThreeDays = ThreeDays.AddDays(1);
                 }
             }
+
+
+
+            FirstName = Customer.Name.Split(" ").FirstOrDefault();
 
 
             return Page();

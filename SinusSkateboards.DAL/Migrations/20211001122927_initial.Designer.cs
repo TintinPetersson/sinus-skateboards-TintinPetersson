@@ -10,8 +10,8 @@ using SinusSkateboards.DAL.Database;
 namespace SinusSkateboards.DAL.Migrations
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20210929124041_Initial")]
-    partial class Initial
+    [Migration("20211001122927_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

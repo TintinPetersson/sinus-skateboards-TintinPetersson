@@ -4,7 +4,6 @@ C:\Users\tpsso\Source\Repos\sinus-skateboards-TintinPetersson\SinusSkateboards.D
 C:\Users\tpsso\Source\Repos\sinus-skateboards-TintinPetersson\SinusSkateboards.DTO\bin\Debug\net5.0\SinusSkateboards.DTO.dll
 C:\Users\tpsso\Source\Repos\sinus-skateboards-TintinPetersson\SinusSkateboards.DTO\bin\Debug\net5.0\ref\SinusSkateboards.DTO.dll
 C:\Users\tpsso\Source\Repos\sinus-skateboards-TintinPetersson\SinusSkateboards.DTO\bin\Debug\net5.0\SinusSkateboards.DTO.pdb
-C:\Users\tpsso\Source\Repos\sinus-skateboards-TintinPetersson\SinusSkateboards.DTO\obj\Debug\net5.0\SinusSkateboards.DTO.csproj.AssemblyReference.cache
 C:\Users\tpsso\Source\Repos\sinus-skateboards-TintinPetersson\SinusSkateboards.DTO\obj\Debug\net5.0\SinusSkateboards.DTO.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\tpsso\Source\Repos\sinus-skateboards-TintinPetersson\SinusSkateboards.DTO\obj\Debug\net5.0\SinusSkateboards.DTO.AssemblyInfoInputs.cache
 C:\Users\tpsso\Source\Repos\sinus-skateboards-TintinPetersson\SinusSkateboards.DTO\obj\Debug\net5.0\SinusSkateboards.DTO.AssemblyInfo.cs
