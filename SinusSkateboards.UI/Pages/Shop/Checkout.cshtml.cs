@@ -58,6 +58,11 @@ namespace SinusSkateboards.UI.Pages.Shop
             Order.Date = DateTime.Now;
             Order.Customer = context.Customer.Where(c => c.Id == Customer.Id).FirstOrDefault();
             Order.OrderNumber = Guid.NewGuid().GetHashCode();
+            while (Order.OrderNumber < 0)
+            {
+                Order.OrderNumber = Guid.NewGuid().GetHashCode();
+            }
+
             Order.Products = new List<ProductModel>();
 
             foreach (var product in Products)
@@ -84,7 +89,7 @@ namespace SinusSkateboards.UI.Pages.Shop
 
             while (OneDay.DayOfWeek == DayOfWeek.Saturday || OneDay.DayOfWeek == DayOfWeek.Sunday)
             {
-                OneDay.AddDays(1);
+                OneDay = OneDay.AddDays(1);
             }
 
             while (ThreeDays.DayOfWeek == DayOfWeek.Saturday || ThreeDays.DayOfWeek == DayOfWeek.Sunday)
@@ -95,8 +100,10 @@ namespace SinusSkateboards.UI.Pages.Shop
                     ThreeDays = ThreeDays.AddDays(1);
                 }
             }
-
-
+            if (ThreeDays.DayOfWeek == OneDay.DayOfWeek)
+            {
+                ThreeDays = ThreeDays.AddDays(2);
+            }
 
             FirstName = Customer.Name.Split(" ").FirstOrDefault();
 
