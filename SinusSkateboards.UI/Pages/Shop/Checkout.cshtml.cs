@@ -44,6 +44,8 @@ namespace SinusSkateboards.UI.Pages.Shop
         }
         public async Task<IActionResult> OnPost()
         {
+            // Deserialize and get Cart and add Customer
+
             string stringProduct = HttpContext.Session.GetString("Cart");
 
             Products = JsonConvert.DeserializeObject<List<ProductModel>>(stringProduct);
@@ -55,8 +57,11 @@ namespace SinusSkateboards.UI.Pages.Shop
             await context.Customer.AddAsync(Customer);
             await context.SaveChangesAsync();
 
+            //-----------------------------------------//
+            // Set Order props, customer and products
+
             Order.Date = DateTime.Now;
-            Order.Customer = context.Customer.Where(c => c.Id == Customer.Id).FirstOrDefault();
+            Order.Customer = Customer;
             Order.OrderNumber = Guid.NewGuid().GetHashCode();
             while (Order.OrderNumber < 0)
             {
@@ -70,11 +75,13 @@ namespace SinusSkateboards.UI.Pages.Shop
                 Order.Products.Add(context.Products.Where(c => c.Id == product.Id).FirstOrDefault());
             }
 
-            OrderSuccessful = true;
-
             await context.Orders.AddAsync(Order);
             await context.SaveChangesAsync();
 
+            //-----------------------------------------//
+            // Serialize cart and fix DayOfTheWeek
+
+            OrderSuccessful = true;
             Products.Clear();
 
             CartModel.ListOfItemsInCart = 0;
@@ -83,9 +90,9 @@ namespace SinusSkateboards.UI.Pages.Shop
             HttpContext.Session.SetString("Cart", stringProduct);
 
 
+
             OneDay = Order.Date.AddDays(1);
             ThreeDays = Order.Date.AddDays(3);
-
 
             while (OneDay.DayOfWeek == DayOfWeek.Saturday || OneDay.DayOfWeek == DayOfWeek.Sunday)
             {
@@ -107,6 +114,7 @@ namespace SinusSkateboards.UI.Pages.Shop
 
             FirstName = Customer.Name.Split(" ").FirstOrDefault();
 
+            //--------------------------------------------------//
 
             return Page();
         }
