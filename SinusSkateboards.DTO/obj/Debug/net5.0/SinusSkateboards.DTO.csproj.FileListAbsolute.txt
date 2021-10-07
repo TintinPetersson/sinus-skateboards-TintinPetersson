@@ -289,3 +289,4 @@ C:\Users\tpsso\Source\Repos\sinus-skateboards-TintinPetersson\SinusSkateboards.D
 C:\Users\tpsso\Source\Repos\sinus-skateboards-TintinPetersson\SinusSkateboards.DTO\bin\Debug\net5.0\refs\System.Xml.XPath.dll
 C:\Users\tpsso\Source\Repos\sinus-skateboards-TintinPetersson\SinusSkateboards.DTO\bin\Debug\net5.0\refs\System.Xml.XPath.XDocument.dll
 C:\Users\tpsso\Source\Repos\sinus-skateboards-TintinPetersson\SinusSkateboards.DTO\bin\Debug\net5.0\refs\WindowsBase.dll
+C:\Users\tpsso\Source\Repos\sinus-skateboards-TintinPetersson\SinusSkateboards.DTO\obj\Debug\net5.0\SinusSkateboards.DTO.csproj.AssemblyReference.cache

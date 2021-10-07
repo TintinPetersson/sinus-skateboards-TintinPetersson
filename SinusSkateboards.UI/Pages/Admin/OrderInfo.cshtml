@@ -37,15 +37,15 @@
                 <div class="card h-100 text-light p-3 mb-2">
                     <div class="d-flex justify-content-center">
                         <div class="d-flex flex-row align-items-center">
-                            <img class="card-img-top2" src="~/images/@product.Image">
+                            <img class="card-img-top2" src="~/images/@product.ProductModel.Image">
                         </div>
                     </div>
-                    <h5 class="card-link">@product.Title</h5>
-                    <span class="mt-1 card-link3">@product.Color</span>
-                    <span class="card-link2 mt-1">@product.Price kr</span>
-                    <span class="card-link3 mt-1">@product.ProductCategory.ToString()</span>
+                    <h5 class="card-link">@product.ProductModel.Title</h5>
+                    <span class="mt-1 card-link3">@product.ProductModel.Color</span>
+                    <span class="card-link2 mt-1">@product.ProductModel.Price kr</span>
+                    <span class="card-link3 mt-1">@product.ProductModel.ProductCategory.ToString()</span>
                     <span class="text-light mt-1">Description: </span>
-                    <span class="text-light mt-1">@product.Description</span>
+                    <span class="text-light mt-1">@product.ProductModel.Description</span>
                 </div>
             </div>
         }

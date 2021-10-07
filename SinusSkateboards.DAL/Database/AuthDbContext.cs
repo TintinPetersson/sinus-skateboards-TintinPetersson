@@ -22,6 +22,7 @@ namespace SinusSkateboards.DAL.Database
         public virtual DbSet<CustomerModel> Customer { get; set; }
         public virtual DbSet<OrderModel> Orders { get; set; }
         public virtual DbSet<ProductModel> Products { get; set; }
+        public virtual DbSet<OrderProductModel> OrderProducts { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

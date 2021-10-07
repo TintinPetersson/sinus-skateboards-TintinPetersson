@@ -57,26 +57,36 @@ namespace SinusSkateboards.UI.Pages.Shop
             await context.Customer.AddAsync(Customer);
             await context.SaveChangesAsync();
 
+
             //-----------------------------------------//
             // Set Order props, customer and products
 
             Order.Date = DateTime.Now;
             Order.Customer = Customer;
-            Order.OrderNumber = Guid.NewGuid().GetHashCode();
-            while (Order.OrderNumber < 0)
-            {
-                Order.OrderNumber = Guid.NewGuid().GetHashCode();
-            }
-
-            Order.Products = new List<ProductModel>();
-
-            foreach (var product in Products)
-            {
-                Order.Products.Add(context.Products.Where(c => c.Id == product.Id).FirstOrDefault());
-            }
+            Order.OrderNumber = Math.Abs(Guid.NewGuid().GetHashCode());
 
             await context.Orders.AddAsync(Order);
             await context.SaveChangesAsync();
+           
+
+            //--------------------------------------//
+            // Add OrderProduct 
+           
+
+            foreach (var product in Products)
+            {
+                var orderProduct = new OrderProductModel();
+                orderProduct.OrderModelId = Order.Id;
+                orderProduct.ProductModelId = product.Id;
+
+                
+                await context.OrderProducts.AddAsync(orderProduct);
+            }
+
+            await context.SaveChangesAsync();
+
+            Order = context.Orders.Include(c => c.Products).ThenInclude(op => op.ProductModel).Where(c => c.Id == Order.Id).FirstOrDefault();
+
 
             //-----------------------------------------//
             // Serialize cart and fix DayOfTheWeek

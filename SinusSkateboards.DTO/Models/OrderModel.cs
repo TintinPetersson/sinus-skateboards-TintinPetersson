@@ -13,6 +13,6 @@ namespace SinusSkateboards.DTO.Models
         public DateTime Date { get; set; }
         public int CustomerId { get; set; }
         public virtual CustomerModel Customer { get; set; }
-        public virtual List<ProductModel> Products { get; set; } 
+        public virtual List<OrderProductModel> Products { get; set; } 
     }
 }
