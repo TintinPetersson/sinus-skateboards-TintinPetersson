@@ -24,11 +24,17 @@ namespace SinusSkateboards.UI.Pages.Shop
         }
         public IActionResult OnPost(string search)
         {
-            int orderNo = int.Parse(search);
+            if (search != null)
+            {
+                int orderNo = int.Parse(search);
 
-            Order = context.Orders.Where(c => c.OrderNumber == orderNo).FirstOrDefault();
+                Order = context.Orders.Where(c => c.OrderNumber == orderNo).FirstOrDefault();
 
-            OrderExists = true;
+                if (Order != null)
+                {
+                    OrderExists = true;
+                }
+            }
 
             return Page();
         }

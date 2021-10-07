@@ -24,8 +24,6 @@
                     <span class="text-light">@order.Products.Count() item(s)</span>
                     <span class="card-link mt-1">Order placed: </span>
                     <span class="text-light mt-1">@order.Date</span>
-                    <span class="card-link">Sent to:</span>
-                    <span class="text-light mb-2">@order.Customer.Address</span>
                     <a class="orderNo text-light mt-2 mb-1" asp-page="/Admin/OrderInfo" asp-route-id="@order.Id">More info</a>
                 </div>
             </div>
